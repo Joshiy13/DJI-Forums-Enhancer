@@ -1,6 +1,6 @@
 browser.browserAction.onClicked.addListener((tab) => {
   // Open the settings window when the toolbar icon is clicked.
-  browser.tabs.create({ url: "settings.html" });
+  browser.tabs.create({ url: "scripts/settings.html" });
 });
 
 // Add listener for pinning the extension to the toolbar.

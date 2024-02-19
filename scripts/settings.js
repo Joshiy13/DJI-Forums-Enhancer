@@ -11,7 +11,6 @@ function openTab(tabName) {
 // Open the default tab on page load
 document.addEventListener("DOMContentLoaded", function () {
     openTab('GeneralSettings'); // Set the default tab here
-
     // Add event listeners to tab buttons
     var tablinks = document.getElementsByClassName("tablink");
     for (var i = 0; i < tablinks.length; i++) {
@@ -20,4 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
             openTab(tabName);
         });
     }
+});
+
+//when test1 is clicked send a message to console saying test1 was clicked also document.getElementById isnt working
+document.getElementById("test1").addEventListener("click", function() {
+    console.log("test1 was clicked");
+});
+
+document.getElementById("test2").addEventListener("click", function() {
+    console.log("test2 was clicked");
+});
+
+document.getElementById("test3").addEventListener("click", function() {
+    console.log("test3 was clicked");
 });
