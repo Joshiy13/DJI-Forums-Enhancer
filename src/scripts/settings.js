@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+//Debugging
 document.getElementById("test1").addEventListener("click", function() {
     console.log("test1 was clicked");
 });
@@ -31,4 +33,9 @@ document.getElementById("test2").addEventListener("click", function() {
 
 document.getElementById("test3").addEventListener("click", function() {
     console.log("test3 was clicked");
+});
+
+//when dropdown is set to kilometers do console.log("kilometers") do this for all other option too
+document.getElementById("distanceUnits").addEventListener("change", function() {
+    console.log("distance was changed to " + this.value);
 });
