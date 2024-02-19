@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-//when test1 is clicked send a message to console saying test1 was clicked also document.getElementById isnt working
 document.getElementById("test1").addEventListener("click", function() {
     console.log("test1 was clicked");
 });
