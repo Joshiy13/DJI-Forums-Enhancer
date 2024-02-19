@@ -8,6 +8,7 @@ function openTab(tabName) {
     document.getElementById(tabName).style.display = "block";
 }
 
+
 // Open the default tab on page load
 document.addEventListener("DOMContentLoaded", function () {
     openTab('GeneralSettings'); // Set the default tab here
@@ -35,7 +36,6 @@ document.getElementById("test3").addEventListener("click", function() {
     console.log("test3 was clicked");
 });
 
-//when dropdown is set to kilometers do console.log("kilometers") do this for all other option too
 document.getElementById("distanceUnits").addEventListener("change", function() {
     console.log("distance was changed to " + this.value);
 });
