@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//Set the default value of the distance units dropdown
+localStorage.setItem("distanceUnits", "feet");
+
 //Save button
 document.getElementById("save").addEventListener("click", function() {
     saveSettings();
