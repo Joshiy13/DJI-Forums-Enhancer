@@ -22,10 +22,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//Save button
+document.getElementById("save").addEventListener("click", function() {
+    saveSettings();
+});
 
-//Debugging
+// Save settings to local storage
+function saveSettings() {
+    var distanceUnits = document.getElementById("distanceUnits").value;
+
+    localStorage.setItem("distanceUnits", distanceUnits);
+}
+
+
+//Code for debugging can be ignored
 document.getElementById("test1").addEventListener("click", function() {
     console.log("test1 was clicked");
+    console.log(localStorage.getItem("distanceUnits"));
 });
 
 document.getElementById("test2").addEventListener("click", function() {
