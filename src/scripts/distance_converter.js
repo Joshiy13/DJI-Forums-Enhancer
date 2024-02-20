@@ -1,10 +1,20 @@
 // Retrieve distanceUnits from local storage
-const distanceUnits = localStorage.getItem("distanceUnits");
+let distanceUnits = localStorage.getItem("distanceUnits");
 
-// Check conditions based on distanceUnits
-if (distanceUnits === "kilometers") {
-    console.log("Testing1");
+// Function to check distanceUnits
+function checkDistanceUnits() {
+    console.log("distanceUnits is set to:", distanceUnits);
 }
+
+// Check distanceUnits initially
+checkDistanceUnits();
+
+// Check distanceUnits in an infinite loop with a 5-second delay
+setInterval(function() {
+    distanceUnits = localStorage.getItem("distanceUnits");
+    checkDistanceUnits();
+}, 5000);
+
 
 // Add event listener to "test2" element
 document.getElementById("test2").addEventListener("click", function() {

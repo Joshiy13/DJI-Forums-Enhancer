@@ -1,6 +1,6 @@
 // Open the specified tab and hide all others
 function openTab(tabName) {
-    var i, tabcontent, tablinks;
+    var i, tabcontent;
     tabcontent = document.getElementsByClassName("tab");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
@@ -23,12 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Set the default value of the distance units dropdown
-localStorage.setItem("distanceUnits", "feet");
+var distanceUnitsDropdown = document.getElementById("distanceUnits");
+var savedDistanceUnits = localStorage.getItem("distanceUnits");
+if (savedDistanceUnits) {
+    distanceUnitsDropdown.value = savedDistanceUnits;
+}
 
-//Save button
-document.getElementById("save").addEventListener("click", function() {
+
+//save settings to local storage automatically
+document.getElementById("distanceUnits").addEventListener("change", function() {
     saveSettings();
 });
+
 
 // Save settings to local storage
 function saveSettings() {
