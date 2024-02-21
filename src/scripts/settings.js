@@ -29,18 +29,28 @@ if (savedDistanceUnits) {
     distanceUnitsDropdown.value = savedDistanceUnits;
 }
 
-
-//save settings to local storage automatically
+//automatically save settings when changed
 document.getElementById("distanceUnits").addEventListener("change", function() {
+    saveSettings();
+});
+document.getElementById("fixMistakes").addEventListener("change", function() {
     saveSettings();
 });
 
 
+var fixMistakesCheckbox = document.getElementById("fixMistakes");
+var savedFixMistakes = localStorage.getItem("fixMistakes");
+if (savedFixMistakes === "true") {
+    fixMistakesCheckbox.checked = true;
+}
+
 // Save settings to local storage
 function saveSettings() {
     var distanceUnits = document.getElementById("distanceUnits").value;
+    var fixMistakes = document.getElementById("fixMistakes").checked;
 
     localStorage.setItem("distanceUnits", distanceUnits);
+    localStorage.setItem("fixMistakes", fixMistakes);
 }
 
 
@@ -60,4 +70,8 @@ document.getElementById("test3").addEventListener("click", function() {
 
 document.getElementById("distanceUnits").addEventListener("change", function() {
     console.log("distance was changed to " + this.value);
+});
+
+document.getElementById("fixMistakes").addEventListener("change", function() {
+    console.log("fixMistakes was changed to " + this.checked);
 });

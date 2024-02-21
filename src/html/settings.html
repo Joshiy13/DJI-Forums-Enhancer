@@ -26,8 +26,46 @@
             <option value="kilometers">Kilometers</option>
             <option value="meters">Meters</option>
             <option value="miles">Miles</option>
-        </select>
-    </div>
+                    </select>
+                    <label for="fixMistakes">Fix website mistakes</label>
+                    <input type="checkbox" id="fixMistakes" name="fixMistakes">
+                    <style>
+                        #fixMistakes {
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            width: 40px;
+                            height: 20px;
+                            background-color: #ccc;
+                            border-radius: 10px;
+                            position: relative;
+                            outline: none;
+                            transition: background-color 0.3s;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+
+                        #fixMistakes:before {
+                            content: "";
+                            position: absolute;
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            background-color: white;
+                            top: 2px;
+                            left: 2px;
+                            transition: transform 0.3s;
+                        }
+
+                        #fixMistakes:checked {
+                            background-color: #2196F3;
+                        }
+
+                        #fixMistakes:checked:before {
+                            transform: translateX(20px);
+                        }
+                    </style>
+                    </div>
 
     <div id="AdvancedSettings" class="tab">
         <h2></h2>
@@ -40,6 +78,7 @@
 
     <script src="../scripts/settings.js"></script>
     <script src="../scripts/distance_converter.js"></script>
+    <script stc="../scripts/spelling_fixer.js"></script>
 
 
 </body>

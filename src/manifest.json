@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "matches": ["*://forum.dji.com/*"],
-      "js": ["scripts/distance_converter.js"],
+      "js": ["scripts/distance_converter.js", "scripts/spelling_fixer.js"],
       "run_at": "document_idle"
     }
   ],
