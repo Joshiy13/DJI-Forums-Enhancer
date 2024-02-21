@@ -18,9 +18,6 @@ function putKilometers() {
 // Check distanceUnits initially
 putKilometers();
 
-setInterval(function() {
-    putKilometers();
-}, 5000);
 
 
 // Add event listener to "test2" element
