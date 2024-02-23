@@ -20,13 +20,5 @@
       "js": ["scripts/distance_converter.js", "scripts/spelling_fixer.js"],
       "run_at": "document_idle"
     }
-  ],
-  "browser_action": {
-    "default_title": "DJI Forums Enhancer",
-    "default_popup": "html/settings.html"
-  },
-  "options_ui": {
-    "page": "html/settings.html",
-    "open_in_tab": false
-  }
+  ]
 }

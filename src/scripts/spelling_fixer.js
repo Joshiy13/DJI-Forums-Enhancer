@@ -1,7 +1,6 @@
 
 function fixSpelling() {
 
-    // Replace "Point:" with "Points:" in the text content of the document
     const info = document.querySelector('.info');
     if (info) {
         info.innerHTML = info.innerHTML.replace(/Point:/g, 'Points:');
@@ -15,7 +14,6 @@ function fixSpelling() {
     navlist.innerHTML = navlist.innerHTML.replace(/Reminders/g, 'Notifications');
 
 
-    // Replace "Point" with "Points" in the text content of span with class "home-title"
     const homeTitle = document.querySelector('.home-title');
     if (homeTitle) {
         homeTitle.innerHTML = homeTitle.innerHTML.replace(/Point(?![s:])/g, 'Points');
