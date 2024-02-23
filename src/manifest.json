@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "DJI Forums Enhancer",
-  "version": "0.2",
+  "version": "0.3",
   "description": "Enhances the DJI Forums experience",
   "icons": {
     "128": "icon128.png"
